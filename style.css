@@ -1,0 +1,181 @@
+/* Custom Design System for HatechLabs */
+/* ===== DARK THEME (Default) ===== */
+:root,
+.dark {
+    --primary: #a2aaff;
+    --primary-container: #929bfa;
+    --on-primary: #1b247f;
+    --secondary: #ffb0c9;
+    --secondary-container: #4e0628;
+    --on-secondary-container: #e986a7;
+    --on-secondary: #702443;
+    --tertiary: #ffdd79;
+    --tertiary-container: #f5ce53;
+    --on-tertiary-container: #584500;
+    --background: #0e0e0e;
+    --surface: #0e0e0e;
+    --on-surface: #e7e5e4;
+    --on-surface-variant: #acabaa;
+    --on-background: #e7e5e4;
+    --surface-container: #191a1a;
+    --surface-container-low: #131313;
+    --surface-container-high: #1f2020;
+    --surface-container-highest: #262626;
+    --surface-container-lowest: #000000;
+    --outline-variant: #484848;
+    --outline: #767575;
+    --inverse-surface: #fcf9f8;
+    --surface-variant: #262626;
+    --primary-fixed-dim: #a5adff;
+    --nav-bg: rgba(14, 14, 14, 0.6);
+    --nav-border: rgba(255, 255, 255, 0.05);
+    --nav-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4), inset 4px 4px 8px rgba(255, 255, 255, 0.05), inset -6px -6px 12px rgba(0, 0, 0, 0.3);
+    --clay-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4), inset 4px 4px 8px rgba(255, 255, 255, 0.05), inset -6px -6px 12px rgba(0, 0, 0, 0.3);
+    --clay-btn-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset -3px -3px 6px rgba(0, 0, 0, 0.4);
+    --clay-btn-hover: 0px 15px 30px rgba(0, 0, 0, 0.4), inset 2px 2px 4px rgba(255, 255, 255, 0.15), inset -4px -4px 8px rgba(0, 0, 0, 0.5);
+    --footer-bg: #131313;
+    --link-inactive: #acabaa;
+    --link-hover: #a2aaff;
+    --mobile-menu-bg: rgba(14, 14, 14, 0.95);
+    --hamburger-bg: white;
+    --hamburger-text: #0e0e0e;
+    --gradient-overlay-from: #0e0e0e;
+}
+
+/* ===== LIGHT THEME ===== */
+.light {
+    --primary: #4d56b0;
+    --primary-container: #6670d4;
+    --on-primary: #ffffff;
+    --secondary: #923f5f;
+    --secondary-container: #ffd9e2;
+    --on-secondary-container: #3e001d;
+    --on-secondary: #ffffff;
+    --tertiary: #7a6100;
+    --tertiary-container: #f5ce53;
+    --on-tertiary-container: #584500;
+    --background: #f8f7f6;
+    --surface: #f8f7f6;
+    --on-surface: #1b1b1b;
+    --on-surface-variant: #565555;
+    --on-background: #1b1b1b;
+    --surface-container: #eeedec;
+    --surface-container-low: #f4f3f2;
+    --surface-container-high: #e6e5e4;
+    --surface-container-highest: #dedddc;
+    --surface-container-lowest: #ffffff;
+    --outline-variant: #c8c7c6;
+    --outline: #767575;
+    --inverse-surface: #303030;
+    --surface-variant: #e6e5e4;
+    --primary-fixed-dim: #6670d4;
+    --nav-bg: rgba(248, 247, 246, 0.7);
+    --nav-border: rgba(0, 0, 0, 0.06);
+    --nav-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08), inset 1px 1px 2px rgba(255, 255, 255, 0.9), inset -2px -2px 4px rgba(0, 0, 0, 0.04);
+    --clay-shadow: 0px 12px 32px rgba(0, 0, 0, 0.06), inset 2px 2px 4px rgba(255, 255, 255, 0.8), inset -4px -4px 8px rgba(0, 0, 0, 0.04);
+    --clay-btn-shadow: 0px 6px 16px rgba(0, 0, 0, 0.06), inset 2px 2px 4px rgba(255, 255, 255, 0.8), inset -2px -2px 4px rgba(0, 0, 0, 0.04);
+    --clay-btn-hover: 0px 10px 24px rgba(0, 0, 0, 0.08), inset 2px 2px 4px rgba(255, 255, 255, 0.9), inset -3px -3px 6px rgba(0, 0, 0, 0.05);
+    --footer-bg: #e6e5e4;
+    --link-inactive: #656464;
+    --link-hover: #4d56b0;
+    --mobile-menu-bg: rgba(248, 247, 246, 0.97);
+    --hamburger-bg: #1b1b1b;
+    --hamburger-text: #f8f7f6;
+    --gradient-overlay-from: #f8f7f6;
+}
+
+/* ===== Theme Transition Animation ===== */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        fill 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        stroke 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ===== Clay Morphism ===== */
+.clay-card {
+    box-shadow: var(--clay-shadow);
+}
+
+.clay-button {
+    box-shadow: var(--clay-btn-shadow);
+}
+
+.clay-button:hover {
+    box-shadow: var(--clay-btn-hover);
+}
+
+.glass-panel {
+    backdrop-filter: blur(12px);
+    background: rgba(38, 38, 38, 0.6);
+}
+
+.light .glass-panel {
+    background: rgba(248, 247, 246, 0.6);
+}
+
+/* ===== Theme Toggle Button ===== */
+.theme-toggle-btn {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--outline-variant);
+    background: var(--surface-container);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: var(--clay-btn-shadow);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1);
+    box-shadow: var(--clay-btn-hover);
+}
+
+.theme-toggle-btn:active {
+    transform: scale(0.92);
+}
+
+.theme-toggle-btn .theme-icon {
+    position: absolute;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: var(--on-surface);
+    font-size: 22px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ===== HTMX Transitions ===== */
+.htmx-indicator {
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+}
+
+.htmx-request .htmx-indicator {
+    opacity: 1;
+}
+
+.htmx-request.htmx-indicator {
+    opacity: 1;
+}
+
+/* Fade-in animation for swapped content */
+#main-content.htmx-swapping {
+    opacity: 0;
+}
+
+#main-content {
+    transition: opacity 0.3s ease-in-out;
+}

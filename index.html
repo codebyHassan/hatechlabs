@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HatechLabs | We Build Modern, Scalable Websites</title>
+    <meta name="description" content="HatechLabs is a modern web development and design agency sculpting high-performance, scalable, and premium digital experiences from the heart of Punjab, Pakistan.">
+    <meta name="keywords" content="web development Lahore, design agency Pakistan, HatechLabs, scalable websites, UI UX design, software engineering, web apps, digital agency">
+    <meta name="author" content="HatechLabs">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#a2aaff">
+    <!-- Open Graph -->
+    <meta property="og:title" content="HatechLabs | We Build Modern, Scalable Websites">
+    <meta property="og:description" content="HatechLabs is a modern web development and design agency sculpting high-performance, scalable, and premium digital experiences from the heart of Punjab.">
+    <meta property="og:image" content="https://hatechlabs.me/images/logo/WhatsApp Image 2026-04-01 at 5.23.02 PM.jpeg">
+    <meta property="og:image:alt" content="HatechLabs Logo">
+    <meta property="og:url" content="https://hatechlabs.me/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="HatechLabs">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HatechLabs | We Build Modern, Scalable Websites">
+    <meta name="twitter:description" content="HatechLabs is a premium web development and design agency from Lahore, Pakistan. We build scalable, high-performance digital products.">
+    <meta name="twitter:image" content="https://hatechlabs.me/images/logo/WhatsApp Image 2026-04-01 at 5.23.02 PM.jpeg">
+    <!-- LinkedIn -->
+    <meta property="og:see_also" content="https://www.linkedin.com/company/hatechlabs">
+    <link rel="canonical" href="https://hatechlabs.me/">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "HatechLabs",
+      "url": "https://hatechlabs.me",
+      "logo": "https://hatechlabs.me/images/logo/WhatsApp Image 2026-04-01 at 5.23.02 PM.jpeg",
+      "description": "HatechLabs is a modern web development and design agency sculpting high-performance, scalable, and premium digital experiences from the heart of Punjab, Pakistan.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK" },
+      "sameAs": [
+        "https://www.linkedin.com/company/hatechlabs",
+        "mailto:admin.hatechlabs@gmail.com"
+      ]
+    }
+    </script>
+    <link rel="icon" type="image/png" href="images/logo/WhatsApp Image 2026-04-01 at 5.23.02 PM.jpeg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="style.css">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "var(--primary)",
+                        "primary-container": "var(--primary-container)",
+                        "on-primary": "var(--on-primary)",
+                        "secondary": "var(--secondary)",
+                        "secondary-container": "var(--secondary-container)",
+                        "on-secondary-container": "var(--on-secondary-container)",
+                        "on-secondary": "var(--on-secondary)",
+                        "tertiary": "var(--tertiary)",
+                        "tertiary-container": "var(--tertiary-container)",
+                        "on-tertiary-container": "var(--on-tertiary-container)",
+                        "background": "var(--background)",
+                        "surface": "var(--surface)",
+                        "on-surface": "var(--on-surface)",
+                        "on-surface-variant": "var(--on-surface-variant)",
+                        "on-background": "var(--on-background)",
+                        "surface-container": "var(--surface-container)",
+                        "surface-container-low": "var(--surface-container-low)",
+                        "surface-container-high": "var(--surface-container-high)",
+                        "surface-container-highest": "var(--surface-container-highest)",
+                        "surface-container-lowest": "var(--surface-container-lowest)",
+                        "outline-variant": "var(--outline-variant)",
+                        "outline": "var(--outline)",
+                        "inverse-surface": "var(--inverse-surface)",
+                        "surface-variant": "var(--surface-variant)",
+                        "primary-fixed-dim": "var(--primary-fixed-dim)",
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <script src="theme.js"></script>
+</head>
+
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+    <!-- Animated Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[9999] bg-background flex flex-col justify-center items-center transition-opacity duration-700">
+        <div class="relative flex justify-center items-center">
+            <div class="absolute w-32 h-32 border-4 border-transparent border-t-primary border-b-tertiary rounded-full animate-spin"></div>
+            <img src="images/logo/WhatsApp Image 2026-04-01 at 5.23.02 PM.jpeg" class="w-20 h-20 rounded-full object-cover animate-pulse" alt="Loading HatechLabs...">
+        </div>
+        <p class="mt-8 font-headline font-bold text-on-surface tracking-widest uppercase text-sm animate-pulse">Loading HatechLabs</p>
+    </div>
+    <!-- Top Navigation Bar -->
+    <nav
+        class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full border backdrop-blur-xl flex justify-between items-center px-8 py-3 z-50" style="border-color: var(--nav-border); background: var(--nav-bg); box-shadow: var(--nav-shadow);">
+        <a href="index.html" class="block cursor-pointer">
+            <img src="images/logo/bg-null.png" class="site-logo" style="width: auto; height: 80px;" alt="Home">
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+            <a class="text-[#ffdd79] font-bold font-headline tracking-tight transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+                href="index.html">Home</a>
+            <a class="text-[#acabaa] hover:text-[#a2aaff] hover:scale-105 font-headline font-bold tracking-tight transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+                href="about.html">About</a>
+            <a class="text-[#acabaa] hover:text-[#a2aaff] hover:scale-105 font-headline font-bold tracking-tight transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+                href="services.html">Services</a>
+            <a class="text-[#acabaa] hover:text-[#a2aaff] hover:scale-105 font-headline font-bold tracking-tight transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+                href="portfolio.html">Portfolio</a>
+            <a class="text-[#acabaa] hover:text-[#a2aaff] hover:scale-105 font-headline font-bold tracking-tight transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+                href="blog.html">Blog</a>
+            <a class="text-[#acabaa] hover:text-[#a2aaff] hover:scale-105 font-headline font-bold tracking-tight transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+                href="contact.html">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                <span id="theme-icon-sun" class="material-symbols-outlined theme-icon">light_mode</span>
+                <span id="theme-icon-moon" class="material-symbols-outlined theme-icon">dark_mode</span>
+            </button>
+            <a href="contact.html">
+                <button
+                    class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-full clay-button hover:scale-105 transition-all duration-300 font-headline">
+                    Get Started
+                </button>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center pt-48 px-8 mb-32 overflow-hidden">
+            <!-- Decorative Ambient Glows -->
+            <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full">
+            </div>
+            <div
+                class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-secondary/10 blur-[120px] rounded-full">
+            </div>
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="space-y-10 z-10">
+                    <div
+                        class="inline-flex items-center gap-2 bg-secondary-container/30 text-on-secondary-container px-4 py-1.5 rounded-sm border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-sm">rocket_launch</span>
+                        <span class="text-xs font-bold tracking-widest uppercase">Pakistan's #1 Next Gen Agency</span>
+                    </div>
+                    <h1
+                        class="text-6xl md:text-8xl font-black font-headline leading-[0.9] tracking-tighter text-on-surface">
+                        We Build <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">Pakistan's</span>
+                        Most Scalable Websites
+                    </h1>
+                    <p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Transforming high-level concepts into tactile digital experiences. We blend editorial design
+                        with robust architecture to scale your vision.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="contact.html">
+                            <button
+                                class="bg-primary text-on-primary font-black px-10 py-5 rounded-full text-lg clay-button hover:scale-105 transition-all duration-300 font-headline">
+                                Launch Project
+                            </button>
+                        </a>
+                        <button
+                            class="bg-surface-container-high border border-outline-variant/20 text-on-surface font-bold px-10 py-5 rounded-full text-lg clay-button hover:scale-105 transition-all duration-300 font-headline flex items-center gap-3">
+                            <span class="material-symbols-outlined">play_circle</span>
+                            View Showreel
+                        </button>
+                    </div>
+                </div>
+                <div class="relative lg:h-[600px] flex items-center justify-center">
+                    <!-- Hero Bento Panel -->
+                    <div
+                        class="w-full aspect-square md:aspect-video lg:aspect-square bg-surface-container clay-card rounded-xl p-8 relative overflow-hidden group">
+                        <img alt="Abstract 3D Shape"
+                            class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay group-hover:scale-110 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeOeyWKz-l1lKtEVfd9qOJ2-vL824u4-P1O_upu4mCh1Yb4Hr2_TrAiC0yYXTLy8_Qfyg3QFJEuUHOUMyWdIuikwNW0kOL8Hsxr4QOYFee_eFh6weHDsjkQyvMfsLpe-bGfX4EQxcN3BZoph1H4pwQi0oqd2zFQdUbYXwBZoS4wy27GWjt_2Bwk3-cZlM-PKlHtBr8bwS9a27JTCxDeMIIA-IZeYhWB_xPJYc12bSwdn9BOXG0qWufQWgW9lPDQAXZ8yf27bov_6sj" />
+                        <div class="relative z-10 h-full flex flex-col justify-between">
+                            <div class="flex justify-between items-start">
+                                <div class="bg-background/40 backdrop-blur-md p-4 rounded-lg clay-card">
+                                    <div class="text-tertiary text-2xl font-black font-headline">99.9%</div>
+                                    <div
+                                        class="text-on-surface-variant text-[10px] uppercase tracking-widest font-bold">
+                                        Uptime Guaranteed</div>
+                                </div>
+                                <div
+                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                                    <span class="material-symbols-outlined text-on-primary">bolt</span>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="h-2 w-3/4 bg-on-surface-variant/20 rounded-full">
+                                    <div class="h-full w-2/3 bg-tertiary rounded-full"></div>
+                                </div>
+                                <div
+                                    class="flex justify-between items-center bg-surface-container-highest/80 backdrop-blur-xl p-4 rounded-lg clay-card">
+                                    <div class="flex -space-x-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full border-2 border-surface-container bg-primary/20">
+                                        </div>
+                                        <div
+                                            class="w-8 h-8 rounded-full border-2 border-surface-container bg-secondary/20">
+                                        </div>
+                                        <div
+                                            class="w-8 h-8 rounded-full border-2 border-surface-container bg-tertiary/20">
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">12+
+                                        Live Projects This Month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Feature Grid Section -->
+        <section class="py-32 px-6 bg-surface-container-low rounded-t-[3rem] relative">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-24 space-y-4">
+                    <h2 class="text-4xl md:text-6xl font-black font-headline text-on-surface tracking-tighter">Tactile
+                        Engineering</h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">We don't just write code; we sculpt
+                        digital interfaces that feel substantial and behave intuitively.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Card 1 -->
+                    <div
+                        class="group bg-surface-container p-10 rounded-xl clay-card hover:-translate-y-2 transition-all duration-300 border border-outline-variant/10">
+                        <div
+                            class="w-16 h-16 bg-surface-container-highest rounded-lg flex items-center justify-center mb-8 clay-card group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-primary text-3xl">auto_awesome</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-headline mb-4 text-on-surface">Precision Design</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-8">Pixel-perfect aesthetics meets editorial
+                            hierarchy. Every shadow and gradient is intentionally placed.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-sm font-semibold text-on-surface">
+                                <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                                Claymorphic Elements
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-semibold text-on-surface">
+                                <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                                Dynamic Theming
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="group bg-surface-container-high p-10 rounded-xl clay-card hover:-translate-y-2 transition-all duration-300 border border-primary/20">
+                        <div
+                            class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-8 clay-card group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-on-primary text-3xl">speed</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-headline mb-4 text-on-surface">Extreme Speed</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-8">Built on modern stacks like Next.js and
+                            Tailwind, ensuring your site loads before the user even blinks.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-sm font-semibold text-on-surface">
+                                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Edge-first delivery
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-semibold text-on-surface">
+                                <span class="material-symbols-outlined text-primary text-lg">check_circle</span> Asset
+                                Optimization
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="group bg-surface-container p-10 rounded-xl clay-card hover:-translate-y-2 transition-all duration-300 border border-outline-variant/10">
+                        <div
+                            class="w-16 h-16 bg-surface-container-highest rounded-lg flex items-center justify-center mb-8 clay-card group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-secondary text-3xl">hub</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-headline mb-4 text-on-surface">Scalable Core</h3>
+                        <p class="text-on-surface-variant leading-relaxed mb-8">Architecture designed to grow. From a
+                            startup landing page to a complex enterprise dashboard.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-sm font-semibold text-on-surface">
+                                <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+                                Modular Components
+                            </li>
+                            <li class="flex items-center gap-3 text-sm font-semibold text-on-surface">
+                                <span class="material-symbols-outlined text-tertiary text-lg">check_circle</span> API
+                                Integration
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Stats / Proof Section -->
+        <section class="py-24 px-6 overflow-hidden">
+            <div
+                class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 items-center bg-surface-container-highest rounded-xl p-1 md:p-2 clay-card">
+                <div class="flex-1 w-full p-12 space-y-6">
+                    <h2 class="text-4xl font-black font-headline text-on-surface">Sculpting the digital future in
+                        Pakistan.</h2>
+                    <p class="text-on-surface-variant">We've helped over 50+ local and global brands redefine their
+                        digital presence with tactically soft designs and high-performance engineering.</p>
+                    <div class="grid grid-cols-2 gap-8 pt-6">
+                        <div>
+                            <div class="text-3xl font-black text-primary font-headline">250+</div>
+                            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Deployments
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-black text-tertiary font-headline">98%</div>
+                            <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Retention
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 w-full relative min-h-[400px] rounded-xl overflow-hidden group">
+                    <img alt="Coding"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3tJ6283jVCNQ5arTCIiyMf4EsvPg6dVPdD5NFVA1R1bDk26UnsJweuMjPxCB51_H0BCcHEsUjDVeLyGaPcDqI0ElcjQljs6TXgTeHhhpatNtUcbdatFl8t9P-zXYaB-6JIgwqz2t1y-Nsu9TRnN83-NKzyqML7ygs-pi9wKoUMqctomS9EIH8aMdiQWP158xXgn8YTzbdZKtvNwtXBTsJfdZXWGczZ3XHo8u5YhvbQj5Oos9YVEnrJsUA0Hi6MyPUo81jMY-cDCqU" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+                    <div
+                        class="absolute bottom-8 left-8 right-8 p-6 bg-surface-container/80 backdrop-blur-md rounded-lg clay-card">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-secondary rounded-full overflow-hidden">
+                                <img alt="Founder" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjmIPrxB7yfpwVKnr-PseXSLpl-YGbExybz7edkplFS3A6Xz3JiRVNOyHMgK5aRjzSfEMzYzlvK8VE5EOI3OVBullJu7tflI90eMaF5MQDiH9m3GvE74e1bwwAMcnrP2VlaWyTuN-QED5MAlqNmoUDVpdThzpX0Pim3alWWC05RKep6p6UF_-dwQ8bAcxNtAry7Y7RG6o5xdA-8nfEU5kHohy2qsdbmxmL6HgsUE3lUaGtDSgmNOrVcu8EbJfmpdeQCEP2bXG65q_o" />
+                            </div>
+                            <div>
+                                <div class="font-bold text-on-surface">Muhammad Ahmad</div>
+                                <div class="text-xs text-on-surface-variant">CEO & Founder, HatechLabs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="py-32 px-6">
+            <div
+                class="max-w-4xl mx-auto text-center space-y-12 bg-gradient-to-br from-surface-container to-surface-container-low p-16 rounded-xl clay-card border border-primary/10">
+                <h2 class="text-5xl md:text-7xl font-black font-headline text-on-surface leading-none tracking-tighter">
+                    Ready to build something <br /> <span class="text-primary">remarkable?</span>
+                </h2>
+                <p class="text-xl text-on-surface-variant max-w-2xl mx-auto">
+                    Our waitlist is currently open for Q3 2024 projects. Let's discuss how we can bring your digital
+                    vision to life.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <a href="contact.html">
+                        <button
+                            class="bg-primary text-on-primary font-black px-12 py-5 rounded-full text-xl clay-button hover:scale-105 transition-all duration-300 font-headline">
+                            Start Your Project
+                        </button>
+                    </a>
+                    <button
+                        class="bg-surface-container-highest text-on-surface font-bold px-12 py-5 rounded-full text-xl clay-button hover:scale-105 transition-all duration-300 font-headline">
+                        Consultation
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#131313] rounded-t-[3rem] mt-20 pt-16 pb-8 shadow-[inset_0px_2px_20px_rgba(0,0,0,0.5)]">
+        <div
+            class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12 font-['Manrope'] text-sm text-[#acabaa]">
+            <div class="col-span-1 md:col-span-1">
+                <div class="text-xl font-black text-[#e7e5e4] mb-4 block font-headline tracking-tighter"><img
+                        src="images/logo/bg-null.png" class="site-logo" style="width: auto; height: 60px;" alt="HatechLabs Logo"></div>
+                <p class="mb-6 leading-relaxed">Sculpted in Lahore, Pakistan. We blend technical authority with
+                    digital
+                    soul from the heart of the Punjab.</p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-[#a2aaff] hover:text-white transition-colors clay-button"
+                        href="mailto:admin.hatechlabs@gmail.com" aria-label="Email HatechLabs">
+                        <span class="material-symbols-outlined text-lg">alternate_email</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-[#a2aaff] hover:text-[#0A66C2] transition-colors clay-button"
+                        href="https://www.linkedin.com/company/hatechlabs" target="_blank" rel="noopener noreferrer" aria-label="HatechLabs on LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-[#e7e5e4] font-bold mb-6 font-headline uppercase tracking-widest text-xs">Services</h4>
+                <ul class="space-y-4">
+                    <li><a class="hover:text-white transition-colors" href="services.html">Web Development</a></li>
+                    <li><a class="hover:text-white transition-colors" href="services.html">Product Design</a></li>
+                    <li><a class="hover:text-white transition-colors" href="services.html">Digital Strategy</a></li>
+                    <li><a class="hover:text-white transition-colors" href="services.html">Brand Identity</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#e7e5e4] font-bold mb-6 font-headline uppercase tracking-widest text-xs">Resources</h4>
+                <ul class="space-y-4">
+                    <li><a class="hover:text-white transition-colors" href="portfolio.html">Case Studies</a></li>
+                    <li><a class="hover:text-white transition-colors" href="blog.html">Blog Postings</a></li>
+                    <li><a class="hover:text-white transition-colors" href="about.html">Careers</a></li>
+                    <li><a class="hover:text-white transition-colors" href="contact.html">Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-[#e7e5e4] font-bold mb-6 font-headline uppercase tracking-widest text-xs">Newsletter
+                </h4>
+                <p class="mb-4">Get the latest design insights curated monthly.</p>
+                <div class="relative">
+                    <input
+                        class="w-full bg-surface-container-lowest border-none rounded-sm px-4 py-3 text-on-surface focus:ring-2 focus:ring-tertiary transition-all"
+                        placeholder="Email address" type="email" />
+                    <button class="absolute right-2 top-1.5 p-1.5 text-primary">
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-outline-variant/10 flex flex-col md:row justify-between items-center gap-6">
+            <div class="text-[#acabaa]">© 2024 HatechLabs. All rights reserved. Sculpted with Tactical Softness.</div>
+            <div class="flex gap-8">
+                <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+                <a class="hover:text-white transition-colors" href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] backdrop-blur-3xl flex flex-col items-center justify-center gap-10 transition-all duration-500 opacity-0 pointer-events-none md:hidden" style="background-color: var(--mobile-menu-bg);">
+        <a class="text-4xl font-headline font-black text-tertiary tracking-tighter hover:scale-110 transition-transform"
+            href="index.html" onclick="toggleMenu()">Home</a>
+        <a class="text-4xl font-headline font-black text-on-surface tracking-tighter hover:text-primary hover:scale-110 transition-transform"
+            href="about.html" onclick="toggleMenu()">About</a>
+        <a class="text-4xl font-headline font-black text-on-surface tracking-tighter hover:text-primary hover:scale-110 transition-transform"
+            href="services.html" onclick="toggleMenu()">Services</a>
+        <a class="text-4xl font-headline font-black text-on-surface tracking-tighter hover:text-primary hover:scale-110 transition-transform"
+            href="portfolio.html" onclick="toggleMenu()">Portfolio</a>
+        <a class="text-4xl font-headline font-black text-on-surface tracking-tighter hover:text-primary hover:scale-110 transition-transform"
+            href="blog.html" onclick="toggleMenu()">Blog</a>
+        <a class="text-4xl font-headline font-black text-on-surface tracking-tighter hover:text-primary hover:scale-110 transition-transform"
+            href="contact.html" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <!-- Floating Mobile Hamburger Button -->
+    <button id="mobile-menu-btn" onclick="toggleMenu()"
+        class="fixed bottom-8 right-8 z-[70] w-16 h-16 rounded-full flex items-center justify-center md:hidden transition-all active:scale-90 hover:scale-105 group clay-button" style="background-color: var(--hamburger-bg); color: var(--hamburger-text);">
+        <span id="menu-icon" class="material-symbols-outlined text-4xl font-black transition-all">menu</span>
+    </button>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const isOpen = menu.classList.contains('opacity-100');
+
+            if (isOpen) {
+                menu.classList.remove('opacity-100', 'pointer-events-auto');
+                menu.classList.add('opacity-0', 'pointer-events-none');
+                icon.innerText = 'menu';
+                icon.classList.remove('rotate-90');
+                document.body.style.overflow = '';
+            } else {
+                menu.classList.remove('opacity-0', 'pointer-events-none');
+                menu.classList.add('opacity-100', 'pointer-events-auto');
+                icon.innerText = 'close';
+                icon.classList.add('rotate-90');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+    </script>
+</body>
+
+</html>
