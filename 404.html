@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+    <title>404 | Lost in the Code - Hatechlabs</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="http://hatechlabs.me/404.html">
+
+    <!-- Performance Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Loader -->
+    <div class="loader-wrapper">
+        <div class="loader-content">
+            <img src="hatechlabs-logo.png" alt="Hatechlabs" class="loader-logo">
+            <div class="loader-text">Initializing Systems</div>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cursor"></div>
+    <div class="noise-bg"></div>
+    <div class="bloom-overlay"></div>
+
+    <!-- Hamburger Menu Button -->
+    <button class="menu-toggle magnetic" data-magnetic>
+        <span class="hamburger-line line-1"></span>
+        <span class="hamburger-line line-2"></span>
+        <span class="hamburger-line line-3"></span>
+    </button>
+
+    <!-- Full Screen Menu Overlay -->
+    <div class="menu-overlay">
+        <div class="menu-bg"></div>
+        <div class="menu-content">
+            <div class="menu-logo-container">
+                <a href="index.html">
+                    <img src="hatechlabs-logo.png" alt="Hatechlabs Logo" class="menu-logo" style="cursor: pointer;">
+                </a>
+            </div>
+            <nav class="menu-nav">
+                <a href="index.html" class="menu-link" data-text="Home">Home</a>
+                <a href="about.html" class="menu-link" data-text="About">About</a>
+                <a href="projects.html" class="menu-link" data-text="Projects">Projects</a>
+                <a href="why-choose-us.html" class="menu-link" data-text="Why Choose Us">Why Choose Us</a>
+                <a href="contact.html" class="menu-link" data-text="Contact">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="logo-container magnetic" data-magnetic
+        style="position: fixed; top: 40px; left: 50px; z-index: 9980; cursor: pointer;">
+        <a href="index.html">
+            <img src="hatechlabs-logo.png" alt="Hatechlabs Logo" class="hero-logo" style="width: 60px;">
+        </a>
+    </div>
+
+    <main class="scroll-container">
+
+        <!-- 404 Content as Cinematic 3D Scene -->
+        <section class="scene scene-3d-cinema" id="scene-3" style="min-height: 100vh;">
+            <div class="s3-grid-floor"></div>
+            <div class="s3-orb s3-orb-1"></div>
+            <div class="s3-orb s3-orb-2"></div>
+            <div class="s3-orb s3-orb-3"></div>
+            <div class="s3-depth-layer s3-layer-back">
+                <span class="s3-float-word s3-fw-1">ERROR</span>
+                <span class="s3-float-word s3-fw-2">LOST</span>
+                <span class="s3-float-word s3-fw-3">NULL</span>
+            </div>
+            <div class="s3-depth-layer s3-layer-mid">
+                <span class="s3-float-word s3-fw-4">VOID</span>
+                <span class="s3-float-word s3-fw-5">UNDEFINED</span>
+            </div>
+            <div class="s3-center-content">
+                <h1 class="s3-title" id="s3-title"
+                    style="font-size: clamp(6rem, 20vw, 20rem); opacity: 1; transform: none;">404</h1>
+                <p class="s3-subtitle" style="opacity: 1; transform: none; font-size: clamp(1.2rem, 2vw, 2rem);">Lost in
+                    the Code</p>
+                <div class="s3-line" style="width: 120px;"></div>
+                <p class="s3-subtitle" style="opacity: 1; transform: none; margin-top: 15px;">The page you are looking
+                    for has been purged from the system.</p>
+                <div style="margin-top: 40px;">
+                    <a href="index.html" class="cta-btn magnetic" data-magnetic>Re-Initialize Home</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Scene -->
+        <section class="scene contact-scene" id="scene-footer">
+            <div class="content-wrapper">
+                <p class="fade-text">Hatechlabs | Cinematic Tech Experience</p>
+            </div>
+            <footer class="social-footer" id="site-footer">
+                <div class="footer-inner">
+                    <div class="footer-brand">
+                        <img src="hatechlabs-logo.png" alt="Hatechlabs" class="footer-logo">
+                        <p class="footer-tagline">From code to strategy, we've got you.</p>
+                        <p class="footer-tagline" style="font-size: 0.7rem; opacity: 0.5; margin-top: 5px;">Johar Town,
+                            Lahore, Pakistan | admin.hatechlabs@gmail.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/hatechlabs" target="_blank" class="social-link magnetic" data-magnetic><svg
+                                width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg><span>LinkedIn</span></a>
+                        <a href="https://www.facebook.com/hatechlabs" target="_blank" class="social-link magnetic" data-magnetic><svg
+                                width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg><span>Facebook</span></a>
+                        <a href="https://x.com/hatechlabs" target="_blank" class="social-link magnetic" data-magnetic><svg
+                                width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg><span>X (Twitter)</span></a>
+                        <a href="https://www.instagram.com/hatechlabs.me/" target="_blank" class="social-link magnetic" data-magnetic><svg
+                                width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg><span>Instagram</span></a>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 Hatechlabs. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+    </main>
+
+    <!-- Lenis for Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js" defer></script>
+
+    <!-- GSAP Core & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+    <script src="navigation.js" defer></script>
+    <script>
+        // Specific 404 Page Animations
+        window.addEventListener('load', () => {
+            // Animate the 3D scene elements immediately on the 404 page
+            gsap.to(".s3-grid-floor", { opacity: 0.6, duration: 1.5, delay: 0.3 });
+            gsap.to(".s3-orb-1", { opacity: 1, scale: 1.2, x: 30, duration: 2, delay: 0.2 });
+            gsap.to(".s3-orb-2", { opacity: 0.8, scale: 1.1, x: -20, duration: 2, delay: 0.4 });
+            gsap.to(".s3-orb-3", { opacity: 0.6, scale: 1.3, y: -20, duration: 2, delay: 0.5 });
+
+            gsap.fromTo(".s3-fw-1", { opacity: 0, x: -200 }, { opacity: 1, x: 0, duration: 1.5, delay: 0.3 });
+            gsap.fromTo(".s3-fw-2", { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 1.5, delay: 0.5 });
+            gsap.fromTo(".s3-fw-3", { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1.5, delay: 0.4 });
+            gsap.fromTo(".s3-fw-4", { opacity: 0, x: 150 }, { opacity: 1, x: 0, duration: 1.2, delay: 0.6 });
+            gsap.fromTo(".s3-fw-5", { opacity: 0, x: -150 }, { opacity: 1, x: 0, duration: 1.2, delay: 0.7 });
+        });
+    </script>
+</body>
+
+</html>
