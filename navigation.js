@@ -32,7 +32,7 @@ class Navigation {
     isValidLink(link) {
         if (!link) return false;
         const href = link.getAttribute('href');
-        
+
         // Only internal links, not hashes, not target="_blank"
         return (
             href &&
@@ -94,28 +94,28 @@ class Navigation {
     transitionIn() {
         return new Promise((resolve) => {
             document.body.classList.add('transition-active');
-            
+
             const tl = gsap.timeline({ onComplete: resolve });
             tl.to(this.overlay, {
                 y: '0%',
                 duration: 0.8,
                 ease: "power4.inOut"
             })
-            .to(this.logo, {
-                opacity: 1,
-                filter: "blur(0px)",
-                duration: 0.5
-            }, "-=0.2");
+                .to(this.logo, {
+                    opacity: 1,
+                    filter: "blur(0px)",
+                    duration: 0.5
+                }, "-=0.2");
         });
     }
 
     transitionOut() {
         return new Promise((resolve) => {
-            const tl = gsap.timeline({ 
+            const tl = gsap.timeline({
                 onComplete: () => {
                     document.body.classList.remove('transition-active');
                     resolve();
-                } 
+                }
             });
 
             tl.to(this.logo, {
@@ -123,13 +123,13 @@ class Navigation {
                 filter: "blur(10px)",
                 duration: 0.4
             })
-            .to(this.overlay, {
-                y: '-100%',
-                duration: 0.8,
-                ease: "power4.inOut"
-            })
-            // Reset position for next transition
-            .set(this.overlay, { y: '100%' });
+                .to(this.overlay, {
+                    y: '-100%',
+                    duration: 0.8,
+                    ease: "power4.inOut"
+                })
+                // Reset position for next transition
+                .set(this.overlay, { y: '100%' });
         });
     }
 }

@@ -538,7 +538,8 @@ html {
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 600;
-    opacity: 1 !important; /* Force high visibility */
+    opacity: 1 !important;
+    /* Force high visibility */
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     display: flex !important;
     align-items: center;
@@ -550,7 +551,8 @@ html {
 }
 
 .social-link svg {
-    fill: #ffffff !important; /* Force white color for icons */
+    fill: #ffffff !important;
+    /* Force white color for icons */
     width: 20px;
     height: 20px;
     display: block;
@@ -698,6 +700,7 @@ html {
     body,
     html {
         cursor: auto;
+        overflow-x: hidden;
     }
 
     #cursor {
@@ -715,56 +718,103 @@ html {
     .logo-container {
         top: 20px !important;
         left: 20px !important;
+        transform: none !important;
     }
 
     .hero-logo {
-        width: 50px !important;
+        width: 45px !important;
     }
 
     /* Typography */
     .hero-title {
-        font-size: clamp(40px, 10vw, 80px) !important;
+        font-size: clamp(35px, 12vw, 60px) !important;
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        font-size: 11px;
+        text-align: center;
+        padding: 0 10px;
     }
 
     .glitch-text {
-        font-size: clamp(30px, 8vw, 60px);
+        font-size: clamp(28px, 8vw, 45px);
     }
 
-    .distort-text {
-        font-size: clamp(35px, 8vw, 60px);
+    .glitch-desc {
+        font-size: 1rem;
+        padding: 0 15px;
     }
 
     .parallax-title {
-        font-size: clamp(40px, 10vw, 80px);
+        font-size: clamp(30px, 10vw, 60px);
     }
 
     .reveal-text {
-        font-size: clamp(30px, 8vw, 50px);
+        font-size: clamp(24px, 8vw, 40px);
     }
 
     /* Spacing & Sizes */
-    .glass-card,
+    .glass-card {
+        padding: 25px !important;
+        border-radius: 12px !important;
+        width: 90vw;
+        margin: 0 auto;
+    }
+
     .stack-card {
-        padding: 30px !important;
+        padding: 25px !important;
         border-radius: 16px !important;
     }
 
     .cards-wrapper {
-        width: 95vw !important;
-        height: 70vh !important;
+        width: 92vw !important;
+        height: 65vh !important;
+    }
+
+    .card-title {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+        margin-bottom: 10px;
+    }
+
+    .card-desc {
+        font-size: clamp(0.9rem, 4vw, 1.1rem);
+        max-width: 95%;
+        margin-bottom: 20px;
     }
 
     .social-links {
-        gap: 20px;
+        gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .hero-circle {
-        width: 80vw;
-        height: 80vw;
+        width: 90vw;
+        height: 90vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    /* 3D Scene Mobile Adjustments */
+    .s3-title {
+        font-size: clamp(2rem, 8vw, 4rem);
+    }
+
+    .s3-subtitle {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+
+    .s3-layer-back .s3-fw-1,
+    .s3-layer-back .s3-fw-2,
+    .s3-layer-back .s3-fw-3,
+    .s3-layer-mid .s3-fw-4,
+    .s3-layer-mid .s3-fw-5 {
+        font-size: clamp(1.5rem, 5vw, 3rem) !important;
     }
 }
+
 
 /* --- Added Styles --- */
 

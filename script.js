@@ -86,7 +86,7 @@ function initGlobal() {
                 tlMenu.reverse();
             }
         });
-        
+
         // Close menu on link click for SPA
         menuOverlay.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
@@ -106,7 +106,7 @@ function initGlobal() {
 window.initPage = function () {
     // Kill existing ScrollTriggers to prevent memory leaks and ghost triggers
     ScrollTrigger.getAll().forEach(t => t.kill());
-    
+
     // Magnetic Hover Effect
     const magneticElements = document.querySelectorAll('.magnetic');
     magneticElements.forEach((elem) => {
@@ -165,7 +165,7 @@ window.initPage = function () {
         });
     }
 
-// --- Loader ---
+    // --- Loader ---
 
     // --- Animations ---
 
@@ -636,7 +636,7 @@ window.initPage = function () {
 // --- Start the App ---
 window.addEventListener('load', () => {
     initGlobal();
-    
+
     // Hide loader
     const tlLoader = gsap.timeline();
     tlLoader.to(".loader-bar", { width: "100%", duration: 0.8, ease: "power2.inOut" })
