@@ -1,0 +1,379 @@
+/* 
+   WHY US PAGE — The Cyber Laboratory Vibe
+   Heavy 3D transforms, neon accents, and technical aesthetics.
+*/
+
+:root {
+    --why-accent: #00f2ff;
+    --why-accent-secondary: #7000ff;
+    --why-bg: #02060a;
+    --why-text: #e0faff;
+    --why-glass: rgba(255, 255, 255, 0.03);
+    --why-border: rgba(0, 242, 255, 0.15);
+}
+
+.why-page {
+    background-color: var(--why-bg);
+    color: var(--why-text);
+    overflow-x: hidden;
+}
+
+/* --- Digital Grid Background --- */
+.why-grid-bg {
+    position: fixed;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 2px 2px, rgba(0, 242, 255, 0.05) 1px, transparent 0);
+    background-size: 40px 40px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.why-glow-orb {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(112, 0, 255, 0.08) 0%, transparent 70%);
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* --- Scene Layouts --- */
+.scene {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 100px 5%;
+    overflow: hidden;
+    background-color: transparent !important; /* Let body and grid background show through */
+}
+
+/* --- Scene 1: Hero --- */
+#why-hero {
+    flex-direction: column;
+    perspective: 2000px;
+}
+
+.why-hero-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+    line-height: 0.85;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.why-hero-title span {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--why-accent);
+    opacity: 0.3;
+}
+
+.why-hero-title .filled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: var(--why-text);
+    -webkit-text-stroke: 0;
+    clip-path: none; /* Visible by default, JS will handle animation */
+}
+
+.why-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--why-accent);
+    letter-spacing: 5px;
+    opacity: 0.7;
+    font-size: 0.8rem;
+}
+
+/* --- Scene 2: Parallel X Horizontal Scroll --- */
+.horizontal-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 50;
+}
+
+.horizontal-scroll-wrapper {
+    display: flex;
+    width: 300vw; /* 3 panels */
+    height: 100%;
+    will-change: transform;
+}
+
+.horizontal-panel {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 10vw;
+    background: transparent;
+}
+
+.horizontal-panel:nth-child(2) {
+    background: rgba(0, 242, 255, 0.02);
+}
+
+.panel-content {
+    max-width: 900px;
+    z-index: 2;
+    text-align: left;
+}
+
+.panel-number {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    font-size: 15vw;
+    font-weight: 900;
+    color: rgba(0, 242, 255, 0.03);
+    line-height: 1;
+    pointer-events: none;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.panel-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+    color: var(--why-accent);
+    filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.4));
+}
+
+.panel-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 25px;
+    color: #fff;
+    letter-spacing: -2px;
+    line-height: 0.9;
+}
+
+.panel-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    line-height: 1.6;
+    color: rgba(224, 250, 255, 0.6);
+    max-width: 700px;
+}
+
+/* --- Scene 3: Data Stream --- */
+#why-data-stream {
+    display: flex;
+    align-items: center;
+}
+
+.data-stream-section {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.stream-container {
+    width: 60%;
+    position: relative;
+    z-index: 10;
+}
+
+.stream-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--why-accent-secondary);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.stream-title {
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #fff 0%, var(--why-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stream-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(224, 250, 255, 0.6);
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.stream-background {
+    position: absolute;
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.stream-line {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    color: var(--why-accent);
+    letter-spacing: 2px;
+}
+
+/* --- Scene 4: Security Vault --- */
+#why-vault {
+    background: radial-gradient(circle at center, #050a12 0%, var(--why-bg) 100%);
+}
+
+.vault-lock-visual {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vault-ring {
+    position: absolute;
+    border: 1px solid var(--why-accent);
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+.vault-ring-1 { 
+    width: 100%; 
+    height: 100%; 
+    border-style: dashed; 
+    border-width: 2px;
+}
+
+.vault-ring-2 { 
+    width: 80%; 
+    height: 80%; 
+    border: 1px solid var(--why-accent-secondary);
+    opacity: 0.15;
+}
+
+.vault-content {
+    text-align: center;
+    z-index: 5;
+    padding: 40px;
+}
+
+.vault-label {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--why-accent);
+    font-size: 0.7rem;
+    letter-spacing: 6px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.vault-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.vault-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    opacity: 0.6;
+    max-width: 280px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- Scroll Indicator --- */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-indicator span {
+    display: block;
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--why-accent), transparent);
+    animation: scrollMove 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+@keyframes scrollMove {
+    0% { transform: translateY(-15px); opacity: 0; }
+    50% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0; }
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 768px) {
+    .horizontal-scroll-wrapper {
+        width: 300vw; /* Keep horizontal on mobile */
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .horizontal-container {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .horizontal-panel {
+        width: 100vw;
+        height: 100%;
+        padding: 60px 30px;
+    }
+
+    .panel-title {
+        font-size: 3.2rem;
+    }
+
+    .why-hero-title {
+        font-size: 4rem;
+    }
+
+    .stream-container {
+        width: 100%;
+    }
+
+    .stream-background {
+        display: none;
+    }
+
+    .vault-lock-visual {
+        width: 300px;
+        height: 300px;
+    }
+
+    .vault-title {
+        font-size: 2.2rem;
+    }
+}

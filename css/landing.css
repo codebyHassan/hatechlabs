@@ -1,0 +1,472 @@
+/* ================================================================
+   TECH STACK SCENE — Built With The Best
+   ================================================================ */
+
+/* Section base */
+.tech-stack-scene {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-color);
+    min-height: 100vh;
+    height: auto;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background grid */
+.tech-stack-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(63, 169, 245, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(63, 169, 245, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+/* Centered radial glow */
+.tech-stack-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(63, 169, 245, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Content wrapper */
+.tech-stack-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+    padding: 0 30px;
+}
+
+/* ---- Header ---- */
+.tech-stack-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.tech-eyebrow {
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+/* Glitch title */
+.tech-main-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
+    line-height: 1.05;
+    cursor: default;
+    opacity: 0;
+}
+
+.tech-main-title::before,
+.tech-main-title::after {
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    font-family: var(--font-heading);
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+}
+
+.tech-main-title::before {
+    color: var(--accent);
+    clip-path: polygon(0 18%, 100% 18%, 100% 52%, 0 52%);
+    animation: tech-glitch-1 7s ease-in-out infinite;
+}
+
+.tech-main-title::after {
+    color: var(--accent-light);
+    clip-path: polygon(0 62%, 100% 62%, 100% 88%, 0 88%);
+    animation: tech-glitch-2 5s ease-in-out infinite;
+}
+
+@keyframes tech-glitch-1 {
+    0%, 84%, 100% { transform: translate(0);           opacity: 0; }
+    85%            { transform: translate(-5px, 2px);  opacity: 0.9; }
+    86%            { transform: translate(5px, -2px);  opacity: 0.7; }
+    87%            { transform: translate(-2px, 0);    opacity: 0.5; }
+    88%            { transform: translate(0);           opacity: 0; }
+}
+
+@keyframes tech-glitch-2 {
+    0%, 89%, 100% { transform: translate(0);           opacity: 0; }
+    90%            { transform: translate(5px, 2px);   opacity: 0.8; }
+    91%            { transform: translate(-4px, -2px); opacity: 0.6; }
+    92%            { transform: translate(0);           opacity: 0; }
+}
+
+.tech-main-desc {
+    font-family: var(--font-body);
+    font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+    color: var(--text-secondary);
+    max-width: 460px;
+    line-height: 1.75;
+    opacity: 0;
+}
+
+/* ---- Marquee ---- */
+.marquee-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    overflow: hidden;
+}
+
+/* Edge gradient fades */
+.marquee-fade-left,
+.marquee-fade-right {
+    position: absolute;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.marquee-fade-left {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-color) 0%, transparent 100%);
+}
+
+.marquee-fade-right {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-color) 0%, transparent 100%);
+}
+
+/* Marquee row */
+.marquee-row {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Pause entire row on hover */
+.marquee-row:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* Track */
+.marquee-track {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee-scroll-left 32s linear infinite;
+    will-change: transform;
+}
+
+.marquee-track-reverse {
+    animation: marquee-scroll-right 28s linear infinite;
+}
+
+@keyframes marquee-scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-scroll-right {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+/* Marquee items */
+.marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 1.8vw, 1.45rem);
+    font-weight: 700;
+    color: rgba(221, 227, 234, 0.18);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 0 44px;
+    transition: color 0.35s ease;
+    cursor: default;
+}
+
+.marquee-item:hover {
+    color: var(--accent);
+}
+
+.marquee-item.m-secondary {
+    font-size: clamp(0.82rem, 1.3vw, 1.1rem);
+    color: rgba(63, 169, 245, 0.18);
+    letter-spacing: 2px;
+}
+
+.marquee-item.m-secondary:hover {
+    color: var(--accent-light);
+}
+
+/* Accent dot separator */
+.m-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.45;
+    flex-shrink: 0;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marquee-item:hover .m-dot {
+    opacity: 1;
+    box-shadow: 0 0 8px var(--accent);
+}
+
+.marquee-item.m-secondary .m-dot {
+    background: var(--accent-light);
+}
+
+.marquee-item.m-secondary:hover .m-dot {
+    box-shadow: 0 0 8px var(--accent-light);
+}
+
+/* ---- Stats Row ---- */
+.tech-stats {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+    padding: 30px 52px;
+    border: 1px solid rgba(63, 169, 245, 0.14);
+    border-radius: 18px;
+    background: rgba(63, 169, 245, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle shimmer on stats box */
+.tech-stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(63, 169, 245, 0.5), transparent);
+}
+
+.tech-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.stat-number {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.stat-plus {
+    color: var(--accent);
+    font-size: 0.65em;
+    vertical-align: super;
+}
+
+.stat-label {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
+.tech-stat-divider {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, transparent, rgba(63, 169, 245, 0.3), transparent);
+    flex-shrink: 0;
+}
+
+/* ---- Mobile ---- */
+@media screen and (max-width: 768px) {
+
+    .tech-stack-content {
+        gap: 36px;
+        padding: 0 16px;
+    }
+
+    .tech-main-title {
+        font-size: clamp(1.8rem, 9vw, 3rem) !important;
+        letter-spacing: -1px;
+    }
+
+    .tech-main-title::before,
+    .tech-main-title::after {
+        display: none; /* hide glitch layers on mobile for perf */
+    }
+
+    .marquee-fade-left,
+    .marquee-fade-right {
+        width: 60px;
+    }
+
+    .marquee-item {
+        font-size: 0.95rem !important;
+        padding: 0 28px !important;
+        letter-spacing: 2px !important;
+    }
+
+    .marquee-item.m-secondary {
+        font-size: 0.78rem !important;
+        padding: 0 22px !important;
+    }
+
+    .tech-stats {
+        gap: 24px;
+        padding: 22px 28px;
+        border-radius: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tech-stat-divider {
+        display: none;
+    }
+
+    .stat-number {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* ---- Tablet ---- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .tech-stack-content {
+        gap: 44px;
+    }
+
+    .tech-stats {
+        gap: 36px;
+        padding: 26px 36px;
+    }
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track,
+    .marquee-track-reverse,
+    .tech-main-title::before,
+    .tech-main-title::after {
+        animation: none !important;
+    }
+}
+
+/* ================================================================
+   STACKING CARDS — Section Header & Transition Fix
+   ================================================================ */
+
+/* Header above the card stack */
+.stacking-header {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.stacking-eyebrow {
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+.stacking-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+/* Bottom fade — bleeds cleanly into contact/footer scene */
+.stacking-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent, var(--bg-color));
+    pointer-events: none;
+    z-index: 20;
+}
+
+/* Stack card: slightly tighten height now header is present */
+.cards-wrapper {
+    position: relative;
+    width: 85vw;
+    max-width: 700px;
+    height: 52vh;
+    perspective: 1500px;
+    z-index: 5;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .stacking-container {
+        gap: 18px;
+    }
+
+    .stacking-title {
+        font-size: clamp(1.3rem, 6vw, 2rem) !important;
+    }
+
+    .stacking-eyebrow {
+        font-size: 0.65rem;
+        letter-spacing: 3px;
+    }
+
+    .cards-wrapper {
+        width: 90vw !important;
+        height: 54vh !important;
+    }
+}

@@ -1,0 +1,125 @@
+/* About Page Specific Design System */
+:root {
+    --about-accent: #ffffff; 
+    --about-silver-gradient: linear-gradient(135deg, #ffffff 0%, #d1d1d1 50%, #888888 100%);
+    --about-accent-glow: rgba(255, 255, 255, 0.2);
+    --about-bg: #0a0a0a;
+}
+
+.about-page {
+    background-color: var(--about-bg);
+    color: #ffffff;
+}
+
+/* Horizontal Scroll Section */
+.horizontal-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.horizontal-scroll-wrapper {
+    display: flex;
+    width: 400vw; /* 4 panels */
+    height: 100%;
+    will-change: transform;
+}
+
+.horizontal-panel {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 10vw;
+}
+
+.panel-content {
+    max-width: 800px;
+    z-index: 2;
+}
+
+.panel-number {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    font-size: 15vw;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.panel-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 8vw, 6rem);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    background: var(--about-silver-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.panel-desc {
+    font-family: var(--font-body);
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Big Marquee */
+.marquee-section {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #000;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.marquee-inner {
+    display: flex;
+    white-space: nowrap;
+}
+
+.marquee-text {
+    font-family: var(--font-heading);
+    font-size: 15vh;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0 50px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    transition: -webkit-text-stroke 0.5s ease;
+}
+
+.marquee-text span {
+    background: var(--about-silver-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0;
+}
+
+/* About Hero Specifics */
+.about-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.split-line {
+    overflow: hidden;
+}
+
+.split-line span {
+    display: block;
+    transform: translateY(100%);
+}
